@@ -73,7 +73,6 @@ Processed through a unified loader:
 ## 🛠 Setup Instructions
 
 1. **Clone the repo:**
-```bash
 git clone https://github.com/DivitM/Naptick1.git
 cd Naptick1
 
@@ -86,7 +85,6 @@ pip install -r requirements.txt
 
 4. **Add your Gemini API key in .env:**
 GOOGLE_API_KEY=your_gemini_key_here
-
 
 5. **Run the app:**
 chainlit run app.py --watch
