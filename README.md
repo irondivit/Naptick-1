@@ -57,6 +57,30 @@ Processed through a unified loader:
 
 ---
 
+## 🗂 Project Structure
+naptik/
+├── data/
+│ ├── wearable_data.csv
+│ ├── chat_history.jsonl
+│ ├── user_profile.jsonl
+│ ├── custom_notes.jsonl
+│ └── location_data.jsonl
+│
+├── chains/
+│ ├── embedding_loader.py # Loads and parses documents
+│ ├── retriever_builder.py # Splits, embeds, and indexes docs in Chroma
+│ └── memory_layer.py # (Optional) memory if extended
+│
+├── agents/
+│ └── chatbot_agent.py # Async chatbot logic with Gemini + RAG
+│
+├── app.py # Chainlit app entry point
+├── requirements.txt # Python dependencies
+└── README.md # This file
+
+
+---
+
 ## ⚙️ Technology Stack
 
 | Component           | Tool                         |
@@ -73,23 +97,36 @@ Processed through a unified loader:
 ## 🛠 Setup Instructions
 
 1. **Clone the repo:**
-```bash
-git clone https://github.com/DivitM/Naptick1.git
-cd Naptick1
+
+    ```bash
+    git clone https://github.com/DivitM/Naptick1.git
+    cd Naptick1
+    ```
 
 2. **Create and activate a virtual environment (optional but recommended):**
-```bash
-python -m venv venv
-venv\Scripts\activate  # On Windows
+
+    ```bash
+    python -m venv venv
+    venv\Scripts\activate  # On Windows
+    ```
 
 3. **Install dependencies:**
-```bash
-pip install -r requirements.txt
 
-4. **Add your Gemini API key in .env:**
-```bash
-GOOGLE_API_KEY=your_gemini_key_here
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4. **Add your Gemini API key in `.env`:**
+
+    ```env
+    GOOGLE_API_KEY=your_gemini_key_here
+    ```
 
 5. **Run the app:**
-```bash
-chainlit run app.py --watch
+
+    ```bash
+    chainlit run app.py --watch
+    ```
+
+Then visit `http://localhost:8000` to interact with your chatbot.
+
