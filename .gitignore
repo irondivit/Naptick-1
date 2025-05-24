@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pkl
+*.db
+*.env
+.venv/
+naptick1/
+chainlit.md
