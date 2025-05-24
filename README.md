@@ -58,6 +58,7 @@ Processed through a unified loader:
 ---
 
 ## 🗂 Project Structure
+```
 naptik/
 ├── data/
 │ ├── wearable_data.csv
@@ -67,17 +68,36 @@ naptik/
 │ └── location_data.jsonl
 │
 ├── chains/
-│ ├── embedding_loader.py # Loads and parses documents
-│ ├── retriever_builder.py # Splits, embeds, and indexes docs in Chroma
-│ └── memory_layer.py # (Optional) memory if extended
+│ ├── embedding_loader.py 
+│ ├── retriever_builder.py
+│ └── memory_layer.py 
 │
 ├── agents/
-│ └── chatbot_agent.py # Async chatbot logic with Gemini + RAG
+│ └── chatbot_agent.py 
 │
-├── app.py # Chainlit app entry point
-├── requirements.txt # Python dependencies
-└── README.md # This file
+├── app.py 
+├── requirements.txt 
+└── README.md 
+```
 
+---
+
+### 📄 File Descriptions
+
+- `data/`: Contains all user data files (CSV + JSONL)
+  - `wearable_data.csv`: Daily sleep, steps, and health stats
+  - `chat_history.jsonl`: Prior user interactions
+  - `user_profile.jsonl`: Age, goals, chronotype, etc.
+  - `custom_notes.jsonl`: Sleep journal entries and habits
+  - `location_data.jsonl`: Timestamps and place visits
+- `chains/`: Components for building the RAG pipeline
+  - `embedding_loader.py`: Loads and converts data to LangChain Documents
+  - `retriever_builder.py`: Chunks and embeds data into ChromaDB
+  - `memory_layer.py`: Optional LangChain memory for chat context
+- `agents/chatbot_agent.py`: Main logic for Gemini-based async chat agent
+- `app.py`: Entry point for Chainlit frontend
+- `requirements.txt`: Python dependency list
+- `README.md`: Project documentation
 
 ---
 
