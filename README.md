@@ -73,18 +73,23 @@ Processed through a unified loader:
 ## 🛠 Setup Instructions
 
 1. **Clone the repo:**
+```bash
 git clone https://github.com/DivitM/Naptick1.git
 cd Naptick1
 
 2. **Create and activate a virtual environment (optional but recommended):**
+```bash
 python -m venv venv
 venv\Scripts\activate  # On Windows
 
 3. **Install dependencies:**
+```bash
 pip install -r requirements.txt
 
 4. **Add your Gemini API key in .env:**
+```bash
 GOOGLE_API_KEY=your_gemini_key_here
 
 5. **Run the app:**
+```bash
 chainlit run app.py --watch
