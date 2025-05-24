@@ -8,5 +8,5 @@ async def on_message(msg: cl.Message):
         response = await run_chatbot(msg.content)
         await cl.Message(content=response).send()
     except Exception as e:
-        await cl.Message(content=f"⚠️ Error: {e}").send()
+        await cl.Message(content=f" Error: {e}").send()
 
