@@ -60,7 +60,7 @@ def get_documents():
     ))
     file_status["manual_identity"] = "Injected"
 
-    print("📂 Data Load Report:")
+    print(" Data Load Report:")
     for k, v in file_status.items():
         print(f"  - {k}: {v}")
 
